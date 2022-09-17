@@ -14,7 +14,6 @@ title= "Deploying Static Websites with Hugo & GoDaddy"
 # Hugo + Netlify + GoDaddy
 ## _How to create a Hugo Website
 
-[![N|ADS](https://drive.google.com/file/d/1fc_TUf2koFfWJ50DnV8TxYw6OJ7GZ1Xx/view?usp=sharing)](https://gohugo.io/documentation/)
 
 Hugo is a potent static website creator created in the GO programming language. You may use it to construct uncluttered, up-to-date websites with minimum overhead that load rapidly.
 
@@ -35,17 +34,17 @@ Your content is subsequently transformed into static HTML files by the static si
 Hugo offers a library of pre-built themes and website layouts that you may select from. Once a theme has been downloaded, you can begin creating your content. Hugo allows you to write information in a variety of formats.
 
 
-[![Hugo_themes](/post/images/hugo_themes.jpg)](https://themes.gohugo.io/)
+![Hugo_themes](/post/images/hugo_themes.jpg)(https://themes.gohugo.io/)
 
 
-[![Hugo_themes](/post/images/hugo_themes_github.jpg)](https://github.com/half-duplex/hugo-arcana/)
+![Hugo_themes](/post/images/hugo_themes_github.jpg)(https://github.com/half-duplex/hugo-arcana/)
 
 ## Hugo Installation
 
 Dillinger is currently extended with the following plugins.
 Instructions on how to use them in your own application are linked below.
 
-| Plugin | README |
+| OS | Step-by-Step Guide |
 | ------ | ------ |
 | Windows | [Hugo Tutorial][Win] |
 | Windows Link| [Hugo Tutorial][Win]  |
@@ -54,16 +53,34 @@ Instructions on how to use them in your own application are linked below.
 |Linux|[Hugo Tutorial][Win] |
 |Linux Tutorial| [Hugo Tutorial][Win]  |
 
-## Hosting
-Getting a static website up and running is simple and fast with Hugo. You can use and configure pre-built themes and run your Hugo website locally for testing. You can also add content pages to your website using Markdown.
-
-
-
 ```Mac
 brew install hugo
 ```
 
 
+## How to create Hugo project
+
+
+1. Open your terminal or command prompt. Navigate to the folder where you would like to create your project.
+2. Execute the hugo new site command:
+```
+hugo new site new-hugo-website
+```
+3. Navigate to the location of your Hugo project in your file explorer.
+4. Open the project folder. You will see that your new Hugo website has the file and folder structure required for your website to work.
+
+![Hugo_themes](/post/images/hugo_folder.jpg)
+
+```
+hugo server
+```
+
+![Hugo_themes](/post/images/cd_hugo_server.jpg)
+
+## GoDaddy And Netlify Deployment
+Getting a static website up and running is simple and fast with Hugo. You can use and configure pre-built themes and run your Hugo website locally for testing. You can also add content pages to your website using Markdown.
+
+![Hugo_themes](/post/images/godaddy.png)
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 

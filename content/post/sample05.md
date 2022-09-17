@@ -1,5 +1,5 @@
 +++
-author = "Ads"
+author = "ADS"
 comments = false
 date = "2022-09-15"
 draft = false
@@ -11,10 +11,14 @@ title= "About"
 tags = ["About"]
 +++
 
-[Ascent Data Solutions](https://gohugo.io/documentation/) helps your data act.
-Data changes frequently. We enable your data and ops teams to configure data expectations and automate actions based on the status of it.
+**Ascent Data Solutions** enables your data to act and produce outcomes.
+Data is constantly changing. We make it possible for your data and operations teams to set up data expectations and automate processes based on its status.
 
-> We analyse three examples of modern data stacks. One is more traditional and business intelligence oriented. Another one is poor and typical for start-ups at the beginning of their lifecycle. And the third one is more advanced and is deeply integrated with organizational processes and decision making.
+We examine three contemporary data stack examples. One is more conventional and focused on business intelligence. Another one is poor and typical for start-ups at the beginning of their lifecycle. The third one, meanwhile, is more sophisticated and tightly integrated with organizational operations and decision-making.
 
-https://gohugo.io/documentation/
+![Hugo_themes](/post/images/about.png)
 
+
+## Contact us
+
+![Hugo_themes](/post/images/automation.jpg)
