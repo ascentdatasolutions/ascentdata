@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on Ascent Data Solutions</title>
+    <link>https://ascentdata.netlify.app/tags/about/</link>
+    <description>Recent content in About on Ascent Data Solutions</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>All rights reserved - 2022</copyright>
+    <lastBuildDate>Thu, 15 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ascentdata.netlify.app/tags/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://ascentdata.netlify.app/post/2022/09/15/test/</link>
+      <pubDate>Thu, 15 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ascentdata.netlify.app/post/2022/09/15/test/</guid>
+      <description>Ascent Data Solutions helps your data act. Data changes frequently. We enable your data and ops teams to configure data expectations and automate actions based on the status of it.
+We analyse three examples of modern data stacks. One is more traditional and business intelligence oriented. Another one is poor and typical for start-ups at the beginning of their lifecycle. And the third one is more advanced and is deeply integrated with organizational processes and decision making.</description>
+    </item>
+    
+  </channel>
+</rss>

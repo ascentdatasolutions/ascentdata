@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2022</copyright>
-    <lastBuildDate>Tue, 13 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ascentdata.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ascentdata.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://ascentdata.netlify.app/tags/about/</link>
+      <pubDate>Thu, 15 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ascentdata.netlify.app/tags/about/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>blog</title>
       <link>https://ascentdata.netlify.app/tags/blog/</link>
@@ -18,11 +27,47 @@
     </item>
     
     <item>
-      <title>test</title>
-      <link>https://ascentdata.netlify.app/tags/test/</link>
+      <title>CSS</title>
+      <link>https://ascentdata.netlify.app/tags/css/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ascentdata.netlify.app/tags/test/</guid>
+      <guid>https://ascentdata.netlify.app/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Html</title>
+      <link>https://ascentdata.netlify.app/tags/html/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ascentdata.netlify.app/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://ascentdata.netlify.app/tags/hugo/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ascentdata.netlify.app/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JAMStack</title>
+      <link>https://ascentdata.netlify.app/tags/jamstack/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ascentdata.netlify.app/tags/jamstack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>https://ascentdata.netlify.app/tags/javascript/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://ascentdata.netlify.app/tags/javascript/</guid>
       <description></description>
     </item>
     

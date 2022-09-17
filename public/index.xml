@@ -7,20 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>All rights reserved - 2022</copyright>
-    <lastBuildDate>Tue, 13 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ascentdata.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ascentdata.netlify.app/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Sample 4</title>
-      <link>https://ascentdata.netlify.app/post/2022/09/13/test/</link>
-      <pubDate>Tue, 13 Sep 2022 00:00:00 +0000</pubDate>
+      <title>About</title>
+      <link>https://ascentdata.netlify.app/post/2022/09/15/test/</link>
+      <pubDate>Thu, 15 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://ascentdata.netlify.app/post/2022/09/13/test/</guid>
-      <description>Hugo is the world&amp;rsquo;s fastest static website engine. It&amp;rsquo;s written in Go (aka Golang) and developed by bep, spf13 and friends.
-Below you will find some of the most common and helpful pages from our documentation.
-https://gohugo.io/documentation/</description>
+      <guid>https://ascentdata.netlify.app/post/2022/09/15/test/</guid>
+      <description>Ascent Data Solutions helps your data act. Data changes frequently. We enable your data and ops teams to configure data expectations and automate actions based on the status of it.
+We analyse three examples of modern data stacks. One is more traditional and business intelligence oriented. Another one is poor and typical for start-ups at the beginning of their lifecycle. And the third one is more advanced and is deeply integrated with organizational processes and decision making.</description>
     </item>
     
     <item>
-      <title>Sample 5</title>
+      <title>Sample 4</title>
       <link>https://ascentdata.netlify.app/post/2022/09/13/test/</link>
       <pubDate>Tue, 13 Sep 2022 00:00:00 +0000</pubDate>
       
@@ -47,18 +46,18 @@ https://gohugo.io/documentation/</description>
       <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://ascentdata.netlify.app/post/2022/01/01/test/</guid>
-      <description>Hugo is the world&amp;rsquo;s fastest static website engine. It&amp;rsquo;s written in Go (aka Golang) and developed by bep, spf13 and friends.
-Below you will find some of the most common and helpful pages from our documentation.
-https://gohugo.io/documentation/</description>
+      <description>As reference #1 let’s use a traditional BI-oriented data stack which looks approximately like this:
+Google Big Query or any other DWH if we take a different organization is in the middle of the stack. There are multiple data sources and ETL or ELT software that collects data from these data sources and puts it into the DWH. Afterward, as soon as data are in the data warehouse, Looker is connected to it for business intelligence and since it is a part of Google Cloud it integrates perfectly with Google Big Query.</description>
     </item>
     
     <item>
-      <title>Sample 1</title>
+      <title>Deploying Static Websites with Hugo &amp; GoDaddy</title>
       <link>https://ascentdata.netlify.app/post/2021/01/01/test/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://ascentdata.netlify.app/post/2021/01/01/test/</guid>
-      <description>echo &amp;#34;hello world !!&amp;#34; </description>
+      <description>Hugo + Netlify + GoDaddy _How to create a Hugo Website Hugo is a potent static website creator created in the GO programming language. You may use it to construct uncluttered, up-to-date websites with minimum overhead that load rapidly.
+Buying a domain in GoDaddy Downloading your favorite hugo theme in local repository with Github Deploying the website in Netlify Magic ✨ You generally don&amp;rsquo;t want to spend a lot of time building a website that will be straightforward and content-driven.</description>
     </item>
     
   </channel>

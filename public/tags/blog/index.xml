@@ -20,17 +20,6 @@ https://gohugo.io/documentation/</description>
     </item>
     
     <item>
-      <title>Sample 5</title>
-      <link>https://ascentdata.netlify.app/post/2022/09/13/test/</link>
-      <pubDate>Tue, 13 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://ascentdata.netlify.app/post/2022/09/13/test/</guid>
-      <description>Hugo is the world&amp;rsquo;s fastest static website engine. It&amp;rsquo;s written in Go (aka Golang) and developed by bep, spf13 and friends.
-Below you will find some of the most common and helpful pages from our documentation.
-https://gohugo.io/documentation/</description>
-    </item>
-    
-    <item>
       <title>Sample 3</title>
       <link>https://ascentdata.netlify.app/post/2022/09/08/test/</link>
       <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
@@ -47,18 +36,8 @@ https://gohugo.io/documentation/</description>
       <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://ascentdata.netlify.app/post/2022/01/01/test/</guid>
-      <description>Hugo is the world&amp;rsquo;s fastest static website engine. It&amp;rsquo;s written in Go (aka Golang) and developed by bep, spf13 and friends.
-Below you will find some of the most common and helpful pages from our documentation.
-https://gohugo.io/documentation/</description>
-    </item>
-    
-    <item>
-      <title>Sample 1</title>
-      <link>https://ascentdata.netlify.app/post/2021/01/01/test/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://ascentdata.netlify.app/post/2021/01/01/test/</guid>
-      <description>echo &amp;#34;hello world !!&amp;#34; </description>
+      <description>As reference #1 let’s use a traditional BI-oriented data stack which looks approximately like this:
+Google Big Query or any other DWH if we take a different organization is in the middle of the stack. There are multiple data sources and ETL or ELT software that collects data from these data sources and puts it into the DWH. Afterward, as soon as data are in the data warehouse, Looker is connected to it for business intelligence and since it is a part of Google Cloud it integrates perfectly with Google Big Query.</description>
     </item>
     
   </channel>
