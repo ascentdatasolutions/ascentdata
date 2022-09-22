@@ -28,6 +28,10 @@
         </div>
 </div>
     <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
+
+    <div class="row">
+      <section id="main" class="col-md-9">
+        <h1 id="title">{{ .Title }}</h1>
 </header>
 
   <main id="content" class="content" role="main">
@@ -44,9 +48,11 @@
           </time>
         {{end}}
          {{ range .Params.tags }}
-          <span class="post-tag small"><a href="{{$baseurl}}tags/{{ . | urlize }}/">#{{ . }}</a></span>
+          <span class="post-tag small"><a href="{{$baseurl}}tags/{{ . | urlize }}/"s>#{{ . }}</a></span>
          {{ end }}
         </section>
+        <aside id="meta" class="col">
+          <div>
     </header>
 
     <section class="post-content">

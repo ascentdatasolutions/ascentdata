@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html lang="{{.Site.LanguageCode}}">
 
+   
+
 <head>
     <meta charset="utf-8" />
+    
+    <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+    <link rel="stylesheet" href="{{ "css/bootstrap.min.css" | relURL }}" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk">
+    <script src="{{ "js/jquery-3.5.1.min.js" | relURL }}"></script>
+    <script src="{{ "js/bootstrap.min.js" | relURL }}" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"></script>
+ 
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
   	<meta property="og:title" content="{{ if ne .RelPermalink "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}" />
@@ -28,6 +37,7 @@
     <meta name="description" content="{{ .Site.Params.description }}" />
 
     <meta name="HandheldFriendly" content="True" />
+    /*ok*/
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="shortcut icon" href="{{.Site.BaseURL}}images/favicon.ico">
@@ -64,8 +74,82 @@
     </script>
     {{end}} 
 </head>
+<body>
+  <header>
+    <div class="wrapper">
+      <a href="{{.Site.BaseURL}}" class="sitelogo"> Test</a>
+      <nav class="header-menu">{{partial "navigation" .}}</nav>
+    </div>
+  
+    <div class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">{{ $.Site.Title }}</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+          {{ range .Site.Menus.navbar }}
+          {{ if .HasChildren }}
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="dropdown-{{ .Identifier }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      {{ .Pre }}
+                      <span>{{ .Name }}</span>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdown-{{ .Identifier  }}">
+                      {{ range .Children }}
+                          <a class="dropdown-item" href="{{ .URL }}">
+                              {{ .Pre }}
+                              <span>{{ .Name }}</span>
+                          </a>
+                      {{ end }}
+                  </div>
+              </li>
+          {{ else }}
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ .URL }}">
+                      {{ .Pre }}
+                      <span>{{ .Name }}</span>
+                  </a>
+              </li>
+          {{ end }}
+      {{ end }}
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown-categories" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Post categories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdown-categories">
+            {{ range $key, $value := $.Site.Taxonomies.categories }}
+            <a class="dropdown-item" href="{{ "categories/" | relURL }}{{ $key }}">{{ $key | humanize }}</a>
+            {{ end }}
+        </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="dropdown-categories" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Post categories
+      </a>
+      <div class="dropdown-menu" aria-labelledby="dropdown-categories">
+          {{ range $key, $value := $.Site.Taxonomies.categories }}
+          <a class="dropdown-item" href="{{ "categories/" | relURL }}{{ $key }}">{{ $key | humanize }}</a>
+          {{ end }}
+      </div>
+  </li>
+</ul>
+</div>
+</div>
+
+
+
+  </header>
+  <main>
+ <div class="wrapper">
+
+  
+<!-- </head>
 <body class="nav-closed">
 <div id="particles-js"></div>
   {{ partial "navigation.html" . }}
 
- <div class="site-wrapper">
+ <div class="site-wrapper"> -->
+

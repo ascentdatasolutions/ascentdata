@@ -2,13 +2,15 @@ baseURL = 'https://ascentdata.netlify.app/'
 languageCode = 'en-us'
 title = 'Ascent Data Solutions'
 themes="hugo-theme-air"
+sectionPagesMenu = "mainmenu"
+
 paginate = 1
 DisqusShortname = ""
 Copyright = "All rights reserved - 2022"
 canonifyurls = true
 
 [author]
-  name = "syui"
+  name = ""
 
 [permalinks]
     post = "/post/:year/:month/:day/:slug"
@@ -27,5 +29,29 @@ canonifyurls = true
   githubName = "syui"
   twitterName = ""
   # set true if you are not proud of using Hugo (true will hide the footer note "Proudly published with HUGO.....")
-  hideHUGOSupport = false
+  hideHUGOSupport = true
   mainSections = ["post"]
+[menu]
+
+[[menu.mainmenu]]
+    identifier = 'contact'
+    name = 'Contact'
+    url = '/Contact/'
+    weight = 20
+
+
+
+
+  [[menu.navbar]]
+    identifier = "post"
+    name = "All posts"
+    pre = "<i class='fas fa-envelope'></i>"
+    url = "/post/"
+    weight = 100
+
+  [[menu.navbar]]
+    identifier = "about"
+    name = "About"
+    pre = "<i class='fas fa-user'></i>"
+    url = "/about/"
+    weight = 101
