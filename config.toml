@@ -17,7 +17,7 @@ canonifyurls = true
 
 [params]
   description = "From Data Science to customized BI solutions"
-  cover = "images/user.jpg"
+  cover = "images/screen4.jpg"
   author = "syui"
   authorlocation = ""
   authorwebsite = "https://syui.cf/hugo-theme-air"
@@ -31,27 +31,28 @@ canonifyurls = true
   # set true if you are not proud of using Hugo (true will hide the footer note "Proudly published with HUGO.....")
   hideHUGOSupport = true
   mainSections = ["post"]
+
 [menu]
 
-[[menu.mainmenu]]
-    identifier = 'contact'
-    name = 'Contact'
-    url = '/Contact/'
-    weight = 20
-
-
-
+  [[menu.navbar]]
+    identifier = "contact"
+    name = "Contact"
+    pre = "<i class='fas fa-envelope'></i>"
+    url = "/contact"
+    weight = 300
 
   [[menu.navbar]]
-    identifier = "post"
-    name = "All posts"
+    identifier = "blog"
+    name = "Blog"
     pre = "<i class='fas fa-envelope'></i>"
-    url = "/post/"
-    weight = 100
+    url = "/"
+    weight = 200
 
   [[menu.navbar]]
     identifier = "about"
     name = "About"
     pre = "<i class='fas fa-user'></i>"
-    url = "/about/"
-    weight = 101
+    url = "/about"
+    weight = 100
+
+
