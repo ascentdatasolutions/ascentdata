@@ -23,11 +23,7 @@
       <pubDate>Tue, 13 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://ascentdata.netlify.app/blog/sample4/</guid>
-      <description>Building for source For production release:
-gulp build --prod Generating pre-built zip archives for distribution:
-gulp build dist --prod Docker Dillinger is very easy to install and deploy in a Docker container.
-By default, the Docker will expose port 8080, so change this within the Dockerfile if necessary. When ready, simply use the Dockerfile to build the image.
-cd dillinger docker build -t &amp;lt;youruser&amp;gt;/dillinger:${package.json.version} . This will create the dillinger image and pull in the necessary dependencies.</description>
+      <description>Architecting, Designing, and Deploying on the Snowflake Data Cloud From day one, Snowflake has had an audacious vision to deliver high performance data management at massive scale — agnostic to the underlying cloud platform and architectural pattern. This comprehensive guide will walk you step-by-step through important principles and show you (with SQL examples and knowledge checks) how to unlock your data to power high-performant data applications and modern data analytics.</description>
     </item>
     
     <item>

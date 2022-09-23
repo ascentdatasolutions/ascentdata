@@ -149,32 +149,16 @@
 
     <section class="post-content">
       <p><img src="https://ascentdata.netlify.app/blog/images/snowflake_01.png" alt="Hugo_themes"></p>
-<h4 id="building-for-source">Building for source</h4>
-<p>For production release:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>gulp build --prod
-</span></span></code></pre></div><p>Generating pre-built zip archives for distribution:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>gulp build dist --prod
-</span></span></code></pre></div><h2 id="docker">Docker</h2>
-<p>Dillinger is very easy to install and deploy in a Docker container.</p>
-<p>By default, the Docker will expose port 8080, so change this within the
-Dockerfile if necessary. When ready, simply use the Dockerfile to
-build the image.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>cd dillinger
-</span></span><span style="display:flex;"><span>docker build -t &lt;youruser&gt;/dillinger:<span style="color:#e6db74">${</span>package.json.version<span style="color:#e6db74">}</span> .
-</span></span></code></pre></div><p>This will create the dillinger image and pull in the necessary dependencies.
-Be sure to swap out <code>${package.json.version}</code> with the actual
-version of Dillinger.</p>
-<p>Once done, run the Docker image and map the port to whatever you wish on
-your host. In this example, we simply map port 8000 of the host to
-port 8080 of the Docker (or whatever port was exposed in the Dockerfile):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>docker run -d -p 8000:8080 --restart<span style="color:#f92672">=</span>always --cap-add<span style="color:#f92672">=</span>SYS_ADMIN --name<span style="color:#f92672">=</span>dillinger &lt;youruser&gt;/dillinger:<span style="color:#e6db74">${</span>package.json.version<span style="color:#e6db74">}</span>
-</span></span></code></pre></div><blockquote>
-<p>Note: <code>--capt-add=SYS-ADMIN</code> is required for PDF rendering.</p>
-</blockquote>
-<p>Verify the deployment by navigating to your server address in
-your preferred browser.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>127.0.0.1:8000
-</span></span></code></pre></div>
+<h4 id="architecting-designing-and-deploying-on-the-snowflake-data-cloud">Architecting, Designing, and Deploying on the Snowflake Data Cloud</h4>
+<p>From day one, Snowflake has had an audacious vision to deliver high performance data management at massive scale — agnostic to the underlying cloud platform and architectural pattern. This comprehensive guide will walk you step-by-step through important principles and show you (with SQL examples and knowledge checks) how to unlock your data to power high-performant data applications and modern data analytics.</p>
+<p>“Snowflake: The Definitive Guide” written by Joyce Kay Avila, a certified Snowflake and Data Superhero with more than 25 years of experience as a business and technology leader. She is currently the Snowflake practice manager for a Snowflake partner consulting firm.</p>
+<p>In this book, you’ll discover what makes the Snowflake Data Cloud unique and gain insights and hands-on knowledge that allow you to explore the art of possibilities with Snowflake. You’ll learn how Snowflake users can build modern integrated data applications and develop new revenue streams based on data. Using hands-on SQL examples, you’ll also discover how the Snowflake Data Cloud helps you accelerate data science by avoiding replatforming or migrating data unnecessarily.</p>
+<p>You’ll be able to:</p>
+<p>Efficiently capture, store, and process large amounts of data at an amazing speed
+Ingest and transform real-time data feeds in both structured and semistructured formats and deliver meaningful data insights within minutes
+Use Snowflake Time Travel and zero-copy cloning to produce a sensible data recovery strategy that balances system resilience with ongoing storage costs
+Securely share data and reduce or eliminate data integration costs by accessing ready-to-query datasets available in the Snowflake Marketplace</p>
+
     </section>
 
 
