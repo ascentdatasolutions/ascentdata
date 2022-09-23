@@ -18,11 +18,20 @@
     </item>
     
     <item>
-      <title>blog</title>
+      <title>Blog</title>
       <link>https://ascentdata.netlify.app/tags/blog/</link>
-      <pubDate>Tue, 13 Sep 2022 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 15 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://ascentdata.netlify.app/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://ascentdata.netlify.app/tags/contact/</link>
+      <pubDate>Thu, 15 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ascentdata.netlify.app/tags/contact/</guid>
       <description></description>
     </item>
     
