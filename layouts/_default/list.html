@@ -47,6 +47,12 @@
 	<div class="extra-pagination inner">
     {{ partial "pagination.html" $paginator }}
 	</div>
+  
+  <div class="list-group">
+    {{ range .Data.Pages }}
+    <a class="list-group-item list-group-item-action" href="{{ .RelPermalink }}">{{ .Date.Format "Mon Jan 2, 2006" }} | {{ .Title }}</a>
+    {{ end }}
+</div>
 
 	{{ range $index, $page := $paginator.Pages }}
 	   {{ .Render "li" }}
