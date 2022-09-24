@@ -1,4 +1,4 @@
-baseURL = 'https://ascentdata.netlify.app/'
+baseURL = 'http://ascentdatasolutions.com/'
 languageCode = 'en-us'
 title = 'Ascent Data Solutions'
 themes="hugo-theme-air"
