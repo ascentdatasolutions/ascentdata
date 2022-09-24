@@ -13,4 +13,4 @@ tags = ["Contact"]
 
 {{< form  >}}
 
-![Hugo_themes](/blog/images/imagen1.png)
+![Hugo_themes](/blog/images/image1.jpg)

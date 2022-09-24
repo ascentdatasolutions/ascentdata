@@ -18,20 +18,20 @@
     </item>
     
     <item>
-      <title>Blog</title>
-      <link>https://ascentdatasolutions.com/tags/blog/</link>
-      <pubDate>Thu, 15 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://ascentdatasolutions.com/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Contact</title>
       <link>https://ascentdatasolutions.com/tags/contact/</link>
       <pubDate>Thu, 15 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://ascentdatasolutions.com/tags/contact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>https://ascentdatasolutions.com/tags/blog/</link>
+      <pubDate>Wed, 14 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ascentdatasolutions.com/tags/blog/</guid>
       <description></description>
     </item>
     
