@@ -8,7 +8,7 @@ menu = ""
 share = false
 slug = "sample3"
 title= ""
-tags = ["blog"]
+tags = ["data"]
 +++
 
 

@@ -1,6 +1,6 @@
 +++
 author = "ADS"
-tags = ["Hugo", "Html", "CSS", "Javascript", "JAMStack"]
+tags = ["Hugo", "Html", "CSS", "Javascript", "JAMStack", "data"]
 comments = false
 date = "2021-01-01"
 draft = false

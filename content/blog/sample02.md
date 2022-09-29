@@ -8,7 +8,7 @@ menu = ""
 share = false
 slug = "sample2"
 title= "Business Intelligence"
-tags = ["blog"]
+tags = ["data","blog"]
 +++
 
 ![Hugo_themes](/blog/images/vis.png)
