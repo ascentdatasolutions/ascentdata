@@ -6,7 +6,7 @@ draft = false
 image = ""
 menu = ""
 share = false
-slug = "sample4"
+slug = "sample5"
 title= "Using Azure Functions for ETL with Power BI reports automation"
 tags = ["blog"]
 +++

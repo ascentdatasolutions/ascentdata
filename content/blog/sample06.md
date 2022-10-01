@@ -7,7 +7,7 @@ draft = false
 image = ""
 menu = ""
 share = false
-slug = "sample1"
+slug = "sample6"
 title= "About"
 +++
 **Ascent Data Solutions** enables your data to act and produce outcomes.
