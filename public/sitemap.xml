@@ -2,6 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ascentdatasolutions.com/</loc>
+    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ascentdatasolutions.com/tags/blog/</loc>
+    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ascentdatasolutions.com/tags/</loc>
+    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ascentdatasolutions.com/blog/sample4/</loc>
+    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://ascentdatasolutions.com/tags/about/</loc>
     <lastmod>2022-09-15T00:00:00+00:00</lastmod>
   </url><url>
@@ -11,16 +23,10 @@
     <loc>https://ascentdatasolutions.com/blog/</loc>
     <lastmod>2022-09-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ascentdatasolutions.com/</loc>
-    <lastmod>2022-09-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ascentdatasolutions.com/tags/contact/</loc>
     <lastmod>2022-09-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ascentdatasolutions.com/contact/</loc>
-    <lastmod>2022-09-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ascentdatasolutions.com/tags/</loc>
     <lastmod>2022-09-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ascentdatasolutions.com/blog/sample3/</loc>
@@ -28,9 +34,6 @@
   </url><url>
     <loc>https://ascentdatasolutions.com/tags/data/</loc>
     <lastmod>2022-09-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ascentdatasolutions.com/tags/blog/</loc>
-    <lastmod>2022-09-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ascentdatasolutions.com/blog/sample4/</loc>
     <lastmod>2022-09-13T00:00:00+00:00</lastmod>

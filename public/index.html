@@ -140,7 +140,7 @@
         <div class="extra-pagination inner">
             <nav class="pagination" role="navigation">
 	
-	<span class="page-number">Page 1 of 2</span>
+	<span class="page-number">Page 1 of 5</span>
 	
 	    <a class="older-posts" href="https://ascentdatasolutions.com/page/2/">Older Posts &rarr;</a>
 	
@@ -152,57 +152,182 @@
         
 <article class="post blog">
     <header class="post-header">
-        <h2 class="post-title"><a href="https://ascentdatasolutions.com/blog/sample3/"></a></h2>
+        <h2 class="post-title"><a href="https://ascentdatasolutions.com/blog/sample4/">Using Azure Functions for ETL with Power BI reports automation</a></h2>
     </header>
     <section class="post-excerpt">
       <p>
           <section class="post-content">
-            <h2 id="case-studies">CASE STUDIES</h2>
-<h1 id="mining-industry">Mining Industry</h1>
-<p><img src="https://ascentdatasolutions.com/blog/images/mining.png" alt="Hugo_themes"></p>
+            <p><img src="https://ascentdatasolutions.com/blog/images/AzureSynapse.jpg" alt="Hugo_themes">
+<img src="https://ascentdatasolutions.com/blog/images/AzureSynapse2.jpg" alt="Hugo_themes">
+<img src="https://ascentdatasolutions.com/blog/images/AzureSynapse3.jpg" alt="Hugo_themes"></p>
+<h2 id="extract">Extract</h2>
+<pre tabindex="0"><code>import os
+import yaml
+import pyodbc
+from azure.storage.blob import ContainerClient
+import csv
+from azure.storage.blob import BlobServiceClient
+import pandas as pd
+import findspark
+from urllib.parse import urlparse
+from io import BytesIO
+import urllib
+import sqlalchemy as sa
 
-          </section>
-      </p>
-      
-    </section>
-    <footer class="post-meta">
-        
-            <img class="author-thumb" src="https://ascentdatasolutions.com/images/user2.png" alt="Author image" nopin="nopin" />
-        
-        
-        
-            
-        
-        on
-            
-                <a href="https://ascentdatasolutions.com/tags/data/">#data</a>,
-            
-        
-        <time class="post-date" datetime="2022-09-14T00:00:00Z">
-            14 Sep 2022
-        </time>
-    </footer>
-</article>
+class IngestaData:
 
+    __config = &#34;&#34;
+
+    #Download parquet to DataFrame
+    def __azure_download_parquet_to_df(url=None):
+        try:
+            if url:
+                connect_str = IngestaData.__config[&#34;azure_storage_connectionstring&#34;] 
+                blob_service_client = BlobServiceClient.from_connection_string(connect_str)
+                path = urlparse(url).path
+                path = path.split(&#34;/&#34;)            
+                container = path[0] + &#34;/&#34; + path[1]
+                blob = &#39;/&#39;.join(path[2:])
+                blob_client = blob_service_client.get_blob_client(container=container, blob=blob)
+                with BytesIO() as input_blob:
+                    blob_client.download_blob().download_to_stream(input_blob)
+                    input_blob.seek(0)
+                    df = pd.read_parquet(input_blob, engine=&#39;pyarrow&#39;)
+                return df
+            else:
+                return None
+        except OSError as err:
+            print(&#34;OS error: {0}&#34;.format(err))
+        except ValueError as err:
+            print(&#34;ValueError error: {0}&#34;.format(err))
+        except BaseException as err:
+            print(f&#34;Unexpected {err=}, {type(err)=}&#34;)
+            raise
+
+    #From Parquet to Synapse
+    def __ingestaSynapse (df):
+        try:
+            server = &#39;zzzzzzdwg.sql.azuresynapse.net&#39; ##&lt;server&gt;.database.windows.net&#39;
+            database = &#39;dwh&#39; 
+            username = &#39;JamesBond&#39; 
+            password = &#39;123456.&#39;   
+            driver= &#39;{ODBC Driver 17 for SQL Server}&#39;
+
+            cnxn = pyodbc.connect(&#39;DRIVER=&#39; + driver +&#39;;SERVER=&#39;+server+&#39;;DATABASE=&#39;+database+&#39;;UID=&#39;+username+&#39;;PWD=&#39;+ password)
+            cursor = cnxn.cursor()
+            
+            for index, row in df.iterrows():
+                cursor.execute(&#34;INSERT INTO dbo.booking (BOOKINGID,BOOKINGNAME,BOOKINGREFERENCENUMBER) values(?,?,?)&#34;, row.BOOKINGID, row.BOOKINGNAME, row.BOOKINGREFERENCENUMBER)
+            cnxn.commit()
+            cursor.close()
+        except OSError as err:
+                print(&#34;OS error: {0}&#34;.format(err))
+
+    def iniciarIngesta(config):
+
+        IngestaData.__config = config
+
+        #FROM PARQUET TO DF
+        df = IngestaData.__azure_download_parquet_to_df(IngestaData.__config[&#34;archivos_container_clean_name&#34;]  + &#34;/booking.parquet&#34;)
+
+        #PARQUET TO SYNAPSE
+        IngestaData.__ingestaSynapse(df)
+</code></pre><h2 id="transform">Transform</h2>
+<pre tabindex="0"><code>import os
+import yaml
+from azure.storage.blob import ContainerClient
+import csv
+from azure.storage.blob import BlobServiceClient
+import pandas as pd
+import findspark
+from urllib.parse import urlparse
+from io import BytesIO
+
+class Transformacion:
+
+    __config = &#34;&#34;
+
+    #METHOD FOR DOWNLOADING CSV TO DF
+    def __azure_download_csv_to_df(url=None):
+        try:
+            if url:
+                blob_service_client = BlobServiceClient.from_connection_string(Transformacion.__config[&#34;azure_storage_connectionstring&#34;])
+                path = urlparse(url).path
+                path = path.split(&#34;/&#34;)            
+                container = path[0] + &#34;/&#34; + path[1]
+                blob = &#39;/&#39;.join(path[2:])
+                blob_client = blob_service_client.get_blob_client(container=container, blob=blob)
+                with BytesIO() as input_blob:
+                    blob_client.download_blob().download_to_stream(input_blob)
+                    input_blob.seek(0)
+                    df = pd.read_csv(input_blob , sep=&#39;;&#39;,  encoding=&#39;latin-1&#39;)
+                return df
+            else:
+                return None
+        except OSError as err:
+            print(&#34;OS error: {0}&#34;.format(err))
+        except ValueError as err:
+            print(&#34;ValueError error: {0}&#34;.format(err))
+        except BaseException as err:
+            print(f&#34;Unexpected {err=}, {type(err)=}&#34;)
+            raise
+    
+    def iniciarTransformacion(config):
+        Transformacion.__config = config
+        print(&#34;Transformacion&#34;)
+
+        #FROM CSV TO DATAFRAME
+        df = Transformacion.__azure_download_csv_to_df( Transformacion.__config[&#34;archivos_container_name&#34;]+ &#34;/booking.csv&#34;)
+
+        #CONVERT CSV TO PARQUET
+        df.to_parquet(Transformacion.__config[&#34;source_folder&#34;] + &#34;/parquet/booking.parquet&#34;)
+
+        #FROM PARQUET TO BLOB STORAGE
+        connect_str = Transformacion.__config[&#34;azure_storage_connectionstring&#34;]
+        blob_service_client = ContainerClient.from_connection_string(connect_str,Transformacion.__config[&#34;archivos_container_clean_name&#34;])
+        blob_client = blob_service_client.get_blob_client(&#39;booking.parquet&#39;)
+        with open(Transformacion.__config[&#34;source_folder&#34;] + &#34;/parquet/booking.parquet&#34;,&#34;rb&#34;) as data:
+            blob_client.upload_blob(data, overwrite=True)
+</code></pre><h2 id="load">Load</h2>
+<pre tabindex="0"><code>import os
+import yaml
+from azure.storage.blob import ContainerClient
+import csv
+
+class Carga:
+
+    __config = &#34;&#34;
+
+    # READING CSV FILES
+    def __get_files(dir):
+        with os.scandir(dir) as entries:
+            for entry in entries:
+                if entry.is_file():# and not entry.name.startwith(&#39;.&#39;):
+                    yield entry
+
+    #UPLOAD FILES  CSV TO BLOB STORAGE
+    def __upload(files,ConnectionString,Container_blob):
+        container_client = ContainerClient.from_connection_string(ConnectionString,Container_blob)
         
+        print(&#34;UPLOADING TO BLOB STORAGE&#34;)
         
-<article class="post blog">
-    <header class="post-header">
-        <h2 class="post-title"><a href="https://ascentdatasolutions.com/blog/sample4/">Snowflake</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-          <section class="post-content">
-            <p><img src="https://ascentdatasolutions.com/blog/images/snowflake_01.png" alt="Hugo_themes"></p>
-<h4 id="architecting-designing-and-deploying-on-the-snowflake-data-cloud">Architecting, Designing, and Deploying on the Snowflake Data Cloud</h4>
-<p>From day one, Snowflake has had an audacious vision to deliver high performance data management at massive scale — agnostic to the underlying cloud platform and architectural pattern. This comprehensive guide will walk you step-by-step through important principles and show you (with SQL examples and knowledge checks) how to unlock your data to power high-performant data applications and modern data analytics.</p>
-<p>“Snowflake: The Definitive Guide” written by Joyce Kay Avila, a certified Snowflake and Data Superhero with more than 25 years of experience as a business and technology leader. She is currently the Snowflake practice manager for a Snowflake partner consulting firm.</p>
-<p>In this book, you’ll discover what makes the Snowflake Data Cloud unique and gain insights and hands-on knowledge that allow you to explore the art of possibilities with Snowflake. You’ll learn how Snowflake users can build modern integrated data applications and develop new revenue streams based on data. Using hands-on SQL examples, you’ll also discover how the Snowflake Data Cloud helps you accelerate data science by avoiding replatforming or migrating data unnecessarily.</p>
-<p>You’ll be able to:</p>
-<p>Efficiently capture, store, and process large amounts of data at an amazing speed
-Ingest and transform real-time data feeds in both structured and semistructured formats and deliver meaningful data insights within minutes
-Use Snowflake Time Travel and zero-copy cloning to produce a sensible data recovery strategy that balances system resilience with ongoing storage costs
-Securely share data and reduce or eliminate data integration costs by accessing ready-to-query datasets available in the Snowflake Marketplace</p>
+        for file in files:
+            blob_client = container_client.get_blob_client(file.name)
+            with open(file.path,&#34;rb&#34;) as data:
+                blob_client.upload_blob(data, overwrite=True)
+                print(&#34; UPLOADING FILES test2022dw&#34;)
+
+
+    def iniciandoCarga(config):
+
+        Carga.__config = config
+        archivos = Carga.__get_files(Carga.__config[&#34;source_folder&#34;] + &#34;/csv&#34;)
+
+        #UPLOADING CSV TO CLOUD
+        Carga.__upload(archivos,Carga.__config[&#34;azure_storage_connectionstring&#34;], Carga.__config[&#34;archivos_container_name&#34;])
+</code></pre><p><a href="https://learn.microsoft.com/en-us/azure/cosmos-db/synapse-link" target="_blank">
+    https://learn.microsoft.com/en-us/azure/cosmos-db/synapse-link
+  </a></p>
 
           </section>
       </p>
@@ -221,8 +346,8 @@ Securely share data and reduce or eliminate data integration costs by accessing 
                 <a href="https://ascentdatasolutions.com/tags/blog/">#blog</a>,
             
         
-        <time class="post-date" datetime="2022-09-13T00:00:00Z">
-            13 Sep 2022
+        <time class="post-date" datetime="2022-09-30T00:00:00Z">
+            30 Sep 2022
         </time>
     </footer>
 </article>
@@ -231,7 +356,7 @@ Securely share data and reduce or eliminate data integration costs by accessing 
 
         <nav class="pagination" role="navigation">
 	
-	<span class="page-number">Page 1 of 2</span>
+	<span class="page-number">Page 1 of 5</span>
 	
 	    <a class="older-posts" href="https://ascentdatasolutions.com/page/2/">Older Posts &rarr;</a>
 	

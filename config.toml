@@ -4,7 +4,7 @@ title = 'Ascent Data Solutions'
 themes="hugo-theme-air"
 sectionPagesMenu = "mainmenu"
 
-paginate = 2
+paginate = 1
 DisqusShortname = ""
 Copyright = "All rights reserved - 2022"
 canonifyurls = true
