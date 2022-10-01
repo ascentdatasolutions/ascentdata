@@ -8,7 +8,7 @@ image = ""
 share = false
 title= "Contact"
 tags = ["Contact"]
-
+notoc = true
 +++
 
 {{< form  >}}

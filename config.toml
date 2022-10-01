@@ -9,6 +9,9 @@ DisqusShortname = ""
 Copyright = "All rights reserved - 2022"
 canonifyurls = true
 
+[markup.tableOfContents]
+  startLevel = 1
+  
 [author]
   name = ""
 
@@ -38,7 +41,7 @@ canonifyurls = true
     identifier = "contact"
     name = "Contact"
     pre = "<i class='fas fa-envelope'></i>"
-    url = "/contact"
+    url = "/contact/#contact"
     weight = 300
 
   [[menu.navbar]]
@@ -52,7 +55,7 @@ canonifyurls = true
     identifier = "about"
     name = "About"
     pre = "<i class='fas fa-user'></i>"
-    url = "/about"
+    url = "/about/#about"
     weight = 100
 
 

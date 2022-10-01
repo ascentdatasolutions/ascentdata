@@ -7,6 +7,7 @@ image = ""
 share = false
 title= "About"
 tags = ["About"]
+notoc = true
 +++
 
 
