@@ -142,7 +142,9 @@
 	
 	    <a class="newer-posts" href="https://ascentdatasolutions.com/page/4/">&larr; Newer Posts</a>
 	
-	<span class="page-number">Page 5 of 5</span>
+	<span class="page-number">Page 5 of 6</span>
+	
+	    <a class="older-posts" href="https://ascentdatasolutions.com/page/6/">Older Posts &rarr;</a>
 	
 </nav>
 
@@ -152,103 +154,21 @@
         
 <article class="post blog">
     <header class="post-header">
-        <h2 class="post-title"><a href="https://ascentdatasolutions.com/blog/sample1/">Deploying Static Websites with Hugo &amp; GoDaddy</a></h2>
+        <h2 class="post-title"><a href="https://ascentdatasolutions.com/blog/sample2/">Business Intelligence</a></h2>
     </header>
     <section class="post-excerpt">
       <p>
           <section class="post-content">
-            <h1 id="hugo--netlify--godaddy">Hugo + Netlify + GoDaddy</h1>
-<h2 id="_how-to-create-a-hugo-website">_How to create a Hugo Website</h2>
-<p>Hugo is a potent static website creator created in the GO programming language. You may use it to construct uncluttered, up-to-date websites with minimum overhead that load rapidly.</p>
-<ul>
-<li>Buying a domain in <a href="https://www.godaddy.com/" target="_blank">
-    GoDaddy
-  </a></li>
-<li>Downloading your favorite hugo theme in local repository with <a href="http://daringfireball.net" target="_blank">
-    Github
-  </a></li>
-<li>Deploying the website in <a href="https://gohugo.io/hosting-and-deployment/hosting-on-netlify/" target="_blank">
-    Netlify
-  </a></li>
-<li>Magic ✨</li>
-</ul>
-<p>You generally don&rsquo;t want to spend a lot of time building a website that will be straightforward and content-driven. If you&rsquo;re building a personal portfolio, business website, or blog, this might be the case.</p>
-<h2 id="what-is-hugo">What is Hugo?</h2>
-<p>With the help of Hugo, a static site generator, you can create a website with little to no coding. You can typically write your content in a basic markup language, like Markdown, using static site generators.</p>
-<p>Your content is subsequently transformed into static HTML files by the static site generator. Before serving up your pages to the user, it applies any templates or styles.</p>
-<p>Hugo offers a library of pre-built themes and website layouts that you may select from. Once a theme has been downloaded, you can begin creating your content. Hugo allows you to write information in a variety of formats.</p>
-<p><img src="https://ascentdatasolutions.com/blog/images/hugo_themes.jpg" alt="Hugo_themes">(<a href="https://themes.gohugo.io/" target="_blank">
-    https://themes.gohugo.io/
-  </a>)</p>
-<p><img src="https://ascentdatasolutions.com/blog/images/hugo_themes_github.jpg" alt="Hugo_themes">(<a href="https://github.com/half-duplex/hugo-arcana/" target="_blank">
-    https://github.com/half-duplex/hugo-arcana/
-  </a>)</p>
-<h2 id="hugo-installation">Hugo Installation</h2>
-<p>Dillinger is currently extended with the following plugins.
-Instructions on how to use them in your own application are linked below.</p>
-<table>
-<thead>
-<tr>
-<th>OS</th>
-<th>Step-by-Step Guide</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Windows</td>
-<td><a href="https://www.youtube.com/watch?v=C04dlR1Ufj4" target="_blank">
-    Hugo Tutorial
-  </a></td>
-</tr>
-<tr>
-<td>Windows Link</td>
-<td><a href="https://www.youtube.com/watch?v=C04dlR1Ufj4" target="_blank">
-    Hugo Tutorial
-  </a></td>
-</tr>
-<tr>
-<td>Mac</td>
-<td><a href="https://www.youtube.com/watch?v=C04dlR1Ufj4" target="_blank">
-    Hugo Tutorial
-  </a></td>
-</tr>
-<tr>
-<td>Mac Tutorial</td>
-<td><a href="https://www.youtube.com/watch?v=C04dlR1Ufj4" target="_blank">
-    Hugo Tutorial
-  </a></td>
-</tr>
-<tr>
-<td>Linux</td>
-<td><a href="https://www.youtube.com/watch?v=C04dlR1Ufj4" target="_blank">
-    Hugo Tutorial
-  </a></td>
-</tr>
-<tr>
-<td>Linux Tutorial</td>
-<td><a href="https://www.youtube.com/watch?v=C04dlR1Ufj4" target="_blank">
-    Hugo Tutorial
-  </a></td>
-</tr>
-</tbody>
-</table>
-<pre tabindex="0"><code class="language-Mac" data-lang="Mac">brew install hugo
-</code></pre><h2 id="how-to-create-hugo-project">How to create Hugo project</h2>
-<ol>
-<li>Open your terminal or command prompt. Navigate to the folder where you would like to create your project.</li>
-<li>Execute the hugo new site command:</li>
-</ol>
-<pre tabindex="0"><code>hugo new site new-hugo-website
-</code></pre><ol start="3">
-<li>Navigate to the location of your Hugo project in your file explorer.</li>
-<li>Open the project folder. You will see that your new Hugo website has the file and folder structure required for your website to work.</li>
-</ol>
-<p><img src="https://ascentdatasolutions.com/blog/images/hugo_folder.jpg" alt="Hugo_themes"></p>
-<pre tabindex="0"><code>hugo server
-</code></pre><p><img src="https://ascentdatasolutions.com/blog/images/cd_hugo_server.jpg" alt="Hugo_themes"></p>
-<h2 id="godaddy-and-netlify-deployment">GoDaddy And Netlify Deployment</h2>
-<p>Getting a static website up and running is simple and fast with Hugo. You can use and configure pre-built themes and run your Hugo website locally for testing. You can also add content pages to your website using Markdown.</p>
-<p><img src="https://ascentdatasolutions.com/blog/images/godaddy.png" alt="Hugo_themes"></p>
+            <p><img src="https://ascentdatasolutions.com/blog/images/vis.png" alt="Hugo_themes"></p>
+<p>As reference #1 let’s use a traditional BI-oriented data stack which looks approximately like this:</p>
+<p>Google Big Query or any other DWH if we take a different organization is in the middle of the stack. There are multiple data sources and ETL or ELT software that collects data from these data sources and puts it into the DWH. 
+Afterward, as soon as data are in the data warehouse, Looker is connected to it for business intelligence and since it is a part of Google Cloud it integrates perfectly with Google Big Query.
+dbt is most probably used for in-warehouse data transformation and this process is orchestrated by Apache Airflow.</p>
+<h2 id="so-what-can-we-say-about-this-data-stack-while-looking-at-it">So, what can we say about this data stack while looking at it?</h2>
+<p>First of all, it is pretty much BI and Data Science oriented. Meaning, most probably, the main consumers of data produced and stored by it are data scientists, business analysts, business developers, or managing directors
+At the same time, we don’t see anything responsible for data quality, such as, for example, Great Expectations, Monte Carlo Data, or any other similar software. It doesn’t mean the company does not use it, but it is not mentioned in the data stack at least
+And there is also a lot of space for real-time operational analytics. ETL, data transformations, and modeling take time and typically operational departments cannot wait for it. Especially if we talk about payment or risk operations from FinTech.</p>
+<p><img src="https://ascentdatasolutions.com/blog/images/vis_bigquery.png" alt="Hugo_themes"></p>
 
           </section>
       </p>
@@ -264,21 +184,13 @@ Instructions on how to use them in your own application are linked below.</p>
         
         on
             
-                <a href="https://ascentdatasolutions.com/tags/hugo/">#Hugo</a>,
-            
-                <a href="https://ascentdatasolutions.com/tags/html/">#Html</a>,
-            
-                <a href="https://ascentdatasolutions.com/tags/css/">#CSS</a>,
-            
-                <a href="https://ascentdatasolutions.com/tags/javascript/">#Javascript</a>,
-            
-                <a href="https://ascentdatasolutions.com/tags/jamstack/">#JAMStack</a>,
-            
                 <a href="https://ascentdatasolutions.com/tags/data/">#data</a>,
             
+                <a href="https://ascentdatasolutions.com/tags/blog/">#blog</a>,
+            
         
-        <time class="post-date" datetime="2021-01-01T00:00:00Z">
-            1 Jan 2021
+        <time class="post-date" datetime="2022-01-01T00:00:00Z">
+            1 Jan 2022
         </time>
     </footer>
 </article>
@@ -289,7 +201,9 @@ Instructions on how to use them in your own application are linked below.</p>
 	
 	    <a class="newer-posts" href="https://ascentdatasolutions.com/page/4/">&larr; Newer Posts</a>
 	
-	<span class="page-number">Page 5 of 5</span>
+	<span class="page-number">Page 5 of 6</span>
+	
+	    <a class="older-posts" href="https://ascentdatasolutions.com/page/6/">Older Posts &rarr;</a>
 	
 </nav>
 
