@@ -6,7 +6,7 @@ date = "2022-09-15"
 draft = false
 image = ""
 share = false
-title= "Get in touch. We'd love to hear from you!"
+title= "Contact"
 tags = ["Contact"]
 notoc = true
 +++
